@@ -1,6 +1,6 @@
 import React from "react";
-import TodoList from "./components/TodoList";
-import TodoForm from "./components/TodoForm";
+import TodoList from "./components/Display";
+import TodoForm from "./components/Counter";
 import { RecoilRoot } from 'recoil';
 
 const App = () => (

@@ -1,7 +1,7 @@
 import "./../styles.css";
 import React from "react";
 import { useRecoilValue, selector } from "recoil";
-import { counterAtom } from "./TodoForm";
+import { counterAtom } from "./Counter";
 
 const valueSelector = selector({
   key: "selector",
@@ -11,7 +11,7 @@ const valueSelector = selector({
   }
 })
 
-const TodoList = () => {
+const Display = () => {
 
   const value = useRecoilValue(valueSelector);
 
@@ -25,7 +25,5 @@ const TodoList = () => {
   );
 }
 
-export default TodoList;
-
-//state management react #redux #react #javascript   #100DaysOfCode https://github.com/Jucian0/infinity-state
+export default Display;
 

@@ -8,7 +8,7 @@ export const counterAtom = atom({
 })
 
 
-const TodoForm = () => {
+const Counter = () => {
 
     const [counter, setCounter] = useRecoilState(counterAtom);
 
@@ -27,6 +27,6 @@ const TodoForm = () => {
     );
 }
 
-export default TodoForm;
+export default Counter;
 
 
