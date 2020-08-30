@@ -1,12 +1,10 @@
 import React from "react";
-import TodoList from "./components/Display";
-import TodoForm from "./components/Counter";
 import { RecoilRoot } from 'recoil';
+import CounterPage from "./Pages/Counter";
 
 const App = () => (
   <RecoilRoot>
-    <TodoForm />
-    <TodoList />
+    <CounterPage />
   </RecoilRoot>
 );
 
