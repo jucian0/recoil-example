@@ -1,15 +1,7 @@
 import "./../styles.css";
 import React from "react";
-import { context } from "../state/state";
-import { useMState, useOnDispatch } from "./../lib";
 
 const TodoList = () => {
-
-   const [todos, { toggleTodo, removeTodo }] = useMState(context, state => state.todos)
-
-   useOnDispatch(context, "toggleTodo", () => {
-      console.log("toggleTodo")
-   })
 
    return (
       <section>
