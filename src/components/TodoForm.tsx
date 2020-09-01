@@ -11,11 +11,13 @@ const TodoList = () => {
                   {todo.complete ? <s>{todo.text}</s> : todo.text}
                   <div>
                      <button
-                        onClick={() => toggleTodo(todo.id)}>
+                     //onClick={() => toggleTodo(todo.id)}
+                     >
                         Toggle
                 </button>
                      <button
-                        onClick={() => removeTodo(todo.id)} >
+                     //onClick={() => removeTodo(todo.id)} 
+                     >
                         Remove
                 </button>
                   </div>
