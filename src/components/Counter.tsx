@@ -7,7 +7,6 @@ export const counterAtom = atom({
     default: 0
 })
 
-
 const Counter = () => {
 
     const [counter, setCounter] = useRecoilState(counterAtom);

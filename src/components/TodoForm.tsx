@@ -6,23 +6,11 @@ const TodoList = () => {
    return (
       <section>
          <ul>
-            {todos.map((todo: any) => (
-               <li key={todo.id}>
-                  {todo.complete ? <s>{todo.text}</s> : todo.text}
-                  <div>
-                     <button
-                     //onClick={() => toggleTodo(todo.id)}
-                     >
-                        Toggle
-                </button>
-                     <button
-                     //onClick={() => removeTodo(todo.id)} 
-                     >
-                        Remove
-                </button>
-                  </div>
-               </li>
-            ))}
+            <form>
+               <input type="text" placeholder="Todo" />
+               <button>Add</button>
+               <button>Get Api Todos</button>
+            </form>
          </ul>
       </section>
    );

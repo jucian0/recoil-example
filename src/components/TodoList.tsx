@@ -6,7 +6,7 @@ const TodoList = () => {
    return (
       <section>
          <ul>
-            {todos.map((todo: any) => (
+            {/* {todos.map((todo: any) => (
                <li key={todo.id}>
                   {todo.complete ? <s>{todo.text}</s> : todo.text}
                   <div>
@@ -22,7 +22,7 @@ const TodoList = () => {
                 </button>
                   </div>
                </li>
-            ))}
+            ))} */}
          </ul>
       </section>
    );
