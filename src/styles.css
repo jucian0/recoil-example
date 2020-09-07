@@ -13,6 +13,10 @@ body {
   background: #2ec4b6;
 }
 
+button{
+  cursor: pointer;
+}
+
 section {
   width: 800px;
   margin: 0 auto;

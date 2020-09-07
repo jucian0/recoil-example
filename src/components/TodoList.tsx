@@ -1,6 +1,6 @@
 import "./../styles.css";
 import React from "react";
-import { useRecoilValue, selector } from "recoil";
+import { useRecoilValue, selector, useRecoilState } from "recoil";
 import { todoList } from "./TodoForm";
 
 
@@ -14,7 +14,25 @@ const listSelector = selector({
 
 const TodoList = () => {
 
-   const todos = useRecoilValue(listSelector);
+   const [todos, setTodos] = useRecoilState(todoList)
+
+   const handleToggle = (id: string) => {
+      const todosChanged = todos.map(todo => {
+         if (todo.id === id) {
+            return {
+               ...todo,
+               done: !todo.done
+            }
+         }
+         return todo
+      })
+      setTodos(todosChanged)
+   }
+
+   const handleRemove = (id: string) => {
+      const todosFiltered = todos.filter(todo => todo.id !== id)
+      setTodos(todosFiltered)
+   }
 
    return (
       <section>
@@ -23,8 +41,8 @@ const TodoList = () => {
                <li key={todo.id}>
                   {todo.done ? <s>{todo.text}</s> : todo.text}
                   <div>
-                     <button>Toggle</button>
-                     <button>Remove</button>
+                     <button onClick={() => handleToggle(todo.id)}>Toggle</button>
+                     <button onClick={() => handleRemove(todo.id)}>Remove</button>
                   </div>
                </li>
             ))}
