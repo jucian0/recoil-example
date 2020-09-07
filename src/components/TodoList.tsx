@@ -1,28 +1,33 @@
 import "./../styles.css";
 import React from "react";
+import { useRecoilValue, selector } from "recoil";
+import { todoList } from "./TodoForm";
+
+
+const listSelector = selector({
+   key: "listSelector",
+   get: ({ get }) => {
+      const value = get(todoList)
+      return value
+   }
+})
 
 const TodoList = () => {
+
+   const todos = useRecoilValue(listSelector);
 
    return (
       <section>
          <ul>
-            {/* {todos.map((todo: any) => (
+            {todos.map(todo => (
                <li key={todo.id}>
-                  {todo.complete ? <s>{todo.text}</s> : todo.text}
+                  {todo.done ? <s>{todo.text}</s> : todo.text}
                   <div>
-                     <button
-                     //onClick={() => toggleTodo(todo.id)}
-                     >
-                        Toggle
-                </button>
-                     <button
-                     //onClick={() => removeTodo(todo.id)}
-                     >
-                        Remove
-                </button>
+                     <button>Toggle</button>
+                     <button>Remove</button>
                   </div>
                </li>
-            ))} */}
+            ))}
          </ul>
       </section>
    );
