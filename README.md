@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Codesandbox
+Codesandbox:
 https://codesandbox.io/s/recoiljs-lfzqp
 
 In the project directory, you can run:
